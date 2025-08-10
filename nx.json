@@ -33,12 +33,8 @@
       "style": "css",
       "unitTestRunner": "none"
     },
-    "@nx/angular:library": {
-      "linter": "eslint",
-      "unitTestRunner": "none"
-    },
-    "@nx/angular:component": {
-      "style": "css"
-    }
-  }
+    "@nx/angular:library": { "linter": "eslint", "unitTestRunner": "none" },
+    "@nx/angular:component": { "style": "css" }
+  },
+  "nxCloudId": "68989f1684d583099e09e9ab"
 }
