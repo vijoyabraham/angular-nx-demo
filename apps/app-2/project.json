@@ -1,30 +1,29 @@
 {
-  "name": "app-1",
+  "name": "app-2",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/app-1/src",
+  "sourceRoot": "apps/app-2/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/app-1",
-        "browser": "apps/app-1/src/main.ts",
+        "outputPath": "dist/apps/app-2",
+        "browser": "apps/app-2/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/app-1/tsconfig.app.json",
+        "tsConfig": "apps/app-2/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/app-1/public",
-            "output": "/"
+            "input": "apps/app-2/public"
           }
         ],
-        "styles": [
+       "styles": [
           "libs/styles/main.scss",
-          "apps/app-1/src/styles.css",
-          "apps/app-1/src/app-one-theme.scss"
+          "apps/app-2/src/styles.css",
+          "apps/app-2/src/app-two-theme.scss"
         ],
         "stylePreprocessorOptions": {
           "includePaths": ["libs/styles"]
@@ -59,10 +58,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "app-1:build:production"
+          "buildTarget": "app-2:build:production"
         },
         "development": {
-          "buildTarget": "app-1:build:development"
+          "buildTarget": "app-2:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -70,7 +69,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "app-1:build"
+        "buildTarget": "app-2:build"
       }
     },
     "lint": {
@@ -80,8 +79,8 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "app-1:build",
-        "staticFilePath": "dist/apps/app-1/browser",
+        "buildTarget": "app-2:build",
+        "staticFilePath": "dist/apps/app-2/browser",
         "spa": true
       }
     }
